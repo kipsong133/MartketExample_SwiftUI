@@ -8,6 +8,8 @@
 import Foundation
 
 struct Product {
+    let id: UUID = UUID()
+//    var id: String { name } // 이런식으로 id 값을 지정해도됨.
     let name: String
     let imageName: String
     let price: Int
@@ -16,6 +18,7 @@ struct Product {
 }
 
 extension Product: Decodable { }
+extension Product: Identifiable { }
 
 let productSamples = [
   Product(name: "나는야 무화과", imageName: "fig", price: 3100, description: "소화가 잘되고 변비에 좋은 달달한 국내산 무화과에요. 고기와 찰떡궁합!"),
