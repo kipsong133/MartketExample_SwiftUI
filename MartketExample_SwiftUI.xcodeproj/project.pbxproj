@@ -19,6 +19,8 @@
 		25D62F242780237400662AC7 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D62F232780237400662AC7 /* Product.swift */; };
 		25D62F26278031E100662AC7 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D62F25278031E100662AC7 /* BundleExtension.swift */; };
 		25D62F282780321C00662AC7 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D62F272780321C00662AC7 /* Store.swift */; };
+		25D62F2A27803A0700662AC7 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D62F2927803A0700662AC7 /* ProductDetailView.swift */; };
+		25DD099427816F3E00FCCC07 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DD099327816F3E00FCCC07 /* Preview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		25D62F232780237400662AC7 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		25D62F25278031E100662AC7 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		25D62F272780321C00662AC7 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		25D62F2927803A0700662AC7 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		25DD099327816F3E00FCCC07 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 			children = (
 				25D62F1A27801A8C00662AC7 /* Home.swift */,
 				25D62F1C27801DBD00662AC7 /* ProductRow.swift */,
+				25D62F2927803A0700662AC7 /* ProductDetailView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 		25D62F1E2780223F00662AC7 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				25DD099227816F3400FCCC07 /* CustomView */,
 				25D62F1F2780224300662AC7 /* Extension */,
 			);
 			path = Helper;
@@ -145,6 +151,14 @@
 				25D62F272780321C00662AC7 /* Store.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		25DD099227816F3400FCCC07 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				25DD099327816F3E00FCCC07 /* Preview.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,12 +235,14 @@
 			files = (
 				25D62F1D27801DBD00662AC7 /* ProductRow.swift in Sources */,
 				25D62F07278014EC00662AC7 /* ContentView.swift in Sources */,
+				25DD099427816F3E00FCCC07 /* Preview.swift in Sources */,
 				25D62F1B27801A8C00662AC7 /* Home.swift in Sources */,
 				25D62F282780321C00662AC7 /* Store.swift in Sources */,
 				25D62F26278031E100662AC7 /* BundleExtension.swift in Sources */,
 				25D62F05278014EC00662AC7 /* MartketExample_SwiftUIApp.swift in Sources */,
 				25D62F212780225100662AC7 /* ColorExtension.swift in Sources */,
 				25D62F242780237400662AC7 /* Product.swift in Sources */,
+				25D62F2A27803A0700662AC7 /* ProductDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
