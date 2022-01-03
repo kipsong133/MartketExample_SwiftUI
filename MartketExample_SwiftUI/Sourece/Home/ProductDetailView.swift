@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ProductDetailView: View {
+    @State private var quantity: Int = 1
+    @State private var showingAlert: Bool = false
+    @EnvironmentObject private var store: Store
+    
     let product: Product
     
     var body: some View {
@@ -16,6 +20,9 @@ struct ProductDetailView: View {
             orderView
         }
         .edgesIgnoringSafeArea(.top)
+        .alert(isPresented: $showingAlert) {
+            confirmAlert
+        }
     }
 }
 
@@ -35,9 +42,7 @@ struct ProductDetailView_Previews: PreviewProvider {
 private extension ProductDetailView {
     var productImage: some View {
         GeometryReader { _ in
-            Image(self.product.imageName)
-                .resizable()
-                .scaledToFill()
+            ResizedImage(self.product.imageName)
         }
     }
     
@@ -68,10 +73,7 @@ private extension ProductDetailView {
                 
                 Spacer()
                 
-                Image(systemName: "heart")
-                    .imageScale(.large)
-                    .foregroundColor(.peach)
-                    .frame(width: 32, height: 32)
+               FavoriteButton(product: product)
             }
             
             Text(splitText(product.description))
@@ -98,14 +100,14 @@ private extension ProductDetailView {
             + Text("\(product.price)").font(.title)
             ).fontWeight(.medium)
             Spacer()
-            // 수량 선택 버튼
+            QuantitySelector(quantity: $quantity)
         }
         .foregroundColor(.black)
     }
     
     var placeOrderButton: some View {
         Button(action: {
-            
+            self.showingAlert = true
         }, label: {
             Capsule()
                 .fill(Color.peach)
@@ -115,5 +117,20 @@ private extension ProductDetailView {
                             .foregroundColor(.white))
                 .padding(.vertical, 8)
         })
+            .buttonStyle(ShrinkButtonStyle())
+    }
+    
+    var confirmAlert: Alert {
+        Alert(
+            title: Text("주문 확인"),
+            message: Text("\(product.name)을(를) \(quantity)개 구매하시겠습니까?"),
+            primaryButton: .default(Text("확인"), action: {
+                // 주문 기능 구현
+                self.placeOrder()
+            }), secondaryButton: .cancel(Text("취소")))
+    }
+    
+    func placeOrder() {
+        store.placeOrder(product: product, quantity: quantity)
     }
 }
