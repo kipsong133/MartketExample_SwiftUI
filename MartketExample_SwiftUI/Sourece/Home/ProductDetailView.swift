@@ -11,6 +11,7 @@ struct ProductDetailView: View {
     @State private var quantity: Int = 1
     @State private var showingAlert: Bool = false
     @EnvironmentObject private var store: Store
+    @State private var showingPopup: Bool = false
     
     let product: Product
     
@@ -19,6 +20,10 @@ struct ProductDetailView: View {
             productImage
             orderView
         }
+        .popup(
+            isPresented: $showingPopup,
+            style: .blur,
+            content: { OrderCompletedMessage() })
         .edgesIgnoringSafeArea(.top)
         .alert(isPresented: $showingAlert) {
             confirmAlert
@@ -132,5 +137,6 @@ private extension ProductDetailView {
     
     func placeOrder() {
         store.placeOrder(product: product, quantity: quantity)
+        showingPopup = true
     }
 }

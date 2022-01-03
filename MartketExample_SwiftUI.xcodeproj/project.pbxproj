@@ -27,6 +27,8 @@
 		25DD099C2782B45600FCCC07 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DD099B2782B45600FCCC07 /* Symbol.swift */; };
 		25DD099E2782B51000FCCC07 /* ResizedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DD099D2782B51000FCCC07 /* ResizedImage.swift */; };
 		25DD09A12782C39900FCCC07 /* ShrinkButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DD09A02782C39900FCCC07 /* ShrinkButtonStyle.swift */; };
+		25DD09A42782C98000FCCC07 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DD09A32782C98000FCCC07 /* Popup.swift */; };
+		25DD09A62782D3BD00FCCC07 /* OrderCompletedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DD09A52782D3BD00FCCC07 /* OrderCompletedMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		25DD099B2782B45600FCCC07 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		25DD099D2782B51000FCCC07 /* ResizedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizedImage.swift; sourceTree = "<group>"; };
 		25DD09A02782C39900FCCC07 /* ShrinkButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShrinkButtonStyle.swift; sourceTree = "<group>"; };
+		25DD09A32782C98000FCCC07 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
+		25DD09A52782D3BD00FCCC07 /* OrderCompletedMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompletedMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,7 @@
 				25D62F2927803A0700662AC7 /* ProductDetailView.swift */,
 				25DD09952781949100FCCC07 /* QuantitySelector.swift */,
 				25DD09972781D33400FCCC07 /* FavoriteButton.swift */,
+				25DD09A52782D3BD00FCCC07 /* OrderCompletedMessage.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 		25D62F1E2780223F00662AC7 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				25DD09A22782C97800FCCC07 /* ViewModifier */,
 				25DD099F2782C38700FCCC07 /* CustomStyle */,
 				25DD099227816F3400FCCC07 /* CustomView */,
 				25D62F1F2780224300662AC7 /* Extension */,
@@ -185,6 +191,14 @@
 				25DD09A02782C39900FCCC07 /* ShrinkButtonStyle.swift */,
 			);
 			path = CustomStyle;
+			sourceTree = "<group>";
+		};
+		25DD09A22782C97800FCCC07 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				25DD09A32782C98000FCCC07 /* Popup.swift */,
+			);
+			path = ViewModifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,9 +281,11 @@
 				25DD09962781949100FCCC07 /* QuantitySelector.swift in Sources */,
 				25D62F1B27801A8C00662AC7 /* Home.swift in Sources */,
 				25D62F282780321C00662AC7 /* Store.swift in Sources */,
+				25DD09A42782C98000FCCC07 /* Popup.swift in Sources */,
 				25D62F26278031E100662AC7 /* BundleExtension.swift in Sources */,
 				25D62F05278014EC00662AC7 /* MartketExample_SwiftUIApp.swift in Sources */,
 				25D62F212780225100662AC7 /* ColorExtension.swift in Sources */,
+				25DD09A62782D3BD00FCCC07 /* OrderCompletedMessage.swift in Sources */,
 				25DD099A27829D0D00FCCC07 /* Order.swift in Sources */,
 				25DD099C2782B45600FCCC07 /* Symbol.swift in Sources */,
 				25D62F242780237400662AC7 /* Product.swift in Sources */,
