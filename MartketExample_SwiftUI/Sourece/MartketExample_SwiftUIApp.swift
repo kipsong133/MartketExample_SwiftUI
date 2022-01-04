@@ -32,5 +32,7 @@ struct MartketExample_SwiftUIApp: App {
         
         // clear or nil 로 결정
         UITableView.appearance().backgroundColor = .clear
+        
+        UISlider.appearance().thumbTintColor = UIColor(named: "peach")
     }
 }

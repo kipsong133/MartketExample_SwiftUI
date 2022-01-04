@@ -82,6 +82,10 @@ fileprivate extension RecipeView {
             
             ResizedImage(recipes[currentIndex].imageName,
                          contentMode: .fit)
+                .padding(.horizontal)
+                .transition(.stripes())
+                .id(currentIndex) // 어떤 것을 기준으로 뷰를 식별할지 결정하는 수식어
+            
             Spacer()
             
             Button(action: { changeIndex(1) }) {
