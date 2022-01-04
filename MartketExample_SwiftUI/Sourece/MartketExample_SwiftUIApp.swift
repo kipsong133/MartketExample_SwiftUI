@@ -11,8 +11,8 @@ import SwiftUI
 struct MartketExample_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .accentColor(.primary)
+            MainTabView()
+                .environmentObject(Store())
                 .onAppear {
                     configureAppearance()
                 }
@@ -29,5 +29,8 @@ struct MartketExample_SwiftUIApp: App {
         UINavigationBar.appearance().titleTextAttributes = [
             .foregroundColor: UIColor(named: "peach")!
         ]
+        
+        // clear or nil 로 결정
+        UITableView.appearance().backgroundColor = .clear
     }
 }
