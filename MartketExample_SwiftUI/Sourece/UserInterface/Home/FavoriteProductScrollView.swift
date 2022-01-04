@@ -19,6 +19,7 @@ struct FavoriteProductScrollView: View {
             }
         }
         .padding()
+        .transition(.slide)
     }
     
     var title: some View {
@@ -34,7 +35,7 @@ struct FavoriteProductScrollView: View {
         }
         .padding(.bottom, 8)
         .onTapGesture {
-            self.showingImage.toggle()
+            withAnimation { self.showingImage.toggle() }
         }
     }
     
@@ -51,6 +52,7 @@ struct FavoriteProductScrollView: View {
                 }
             }
         }
+        .animation(.spring(dampingFraction: 0.78), value: store.products)
     }
     
     func eachProduct(_ product: Product) -> some View {
